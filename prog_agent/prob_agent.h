@@ -16,13 +16,11 @@ using namespace std;
 
 typedef tuple<int,int> idx;
 typedef geometry_msgs::Pose2D pos;
-typedef bool isobserved; //did i see the cell?
-typedef bool istarget; // if then does that cell have target?
-typedef tuple<isobserved,istarget> sensor_data;
+typedef tuple<bool,bool> sensor_data;
 
 typedef map<idx,pos> pos_map;
 typedef map<idx,sensor_data> sensor_map;
-
+typedef map<idx,double> probablity_map;
 
 double atan3(double Y,double X){
 
@@ -30,7 +28,6 @@ double atan3(double Y,double X){
     if(theta<0)
         theta =2*PI+theta;
     return theta;
-
 }
 
 
@@ -70,6 +67,7 @@ private:
     int Nx, Ny;
 public:
     sensor_map data;
+    probablity_map prob_map;
 
     agent(double ang,double rad, const pos& spawn_position,int Nx,int Ny){
         //radian
@@ -85,31 +83,86 @@ public:
                 data.insert(pair<idx,sensor_data>(cur_idx,sensor_data(false,false)));
             }
         }
+        // cell information
+        this->Nx=Nx; this->Ny=Ny;
+
+
+        //prob_map intialization
+
+        probablity_map::iterator it=prob_map.begin();
+        probablity_map::iterator it_end=prob_map.end();
+
+        double init_prob=1/(Nx*Ny);
+
+        while(it!=it_end){
+
+            it->second=init_prob;
+            ++it;
+        }
     }
 
-    void data_renewal(workspace ws){
+    void data_renewal(const workspace& ws){
         pos_map::iterator it= ws.m.begin();
         pos_map::iterator it_end=ws.m.end();
 
         while(it!=it_end){
+
             idx cur_idx=it->first;
             pos cur_pos=it->second;
             double theta=atan3(cur_pos.y-state.y,cur_pos.x-state.x);
             sensor_data cur_sensor_data;
             // check whether that position in sensor boundary
-            get<0>(cur_sensor_data)= sqrt(pow(cur_pos.x-state.x,2)+pow(cur_pos.y-state.y,2))<sensor_rad ||
-                    (theta>state.theta-sensor_ang/2 || theta<state.theta+sensor_ang/2);
+            get<0>(cur_sensor_data)= sqrt(pow(cur_pos.x-state.x,2)+pow(cur_pos.y-state.y,2))<sensor_rad &&
+                    (theta>state.theta-sensor_ang/2 && theta<state.theta+sensor_ang/2);
 
             // check whether that position is actually target location
-            get<1>(cur_sensor_data)=get<0>(cur_sensor_data)||(cur_idx== ws.target_loc);
-
+            get<1>(cur_sensor_data)=get<0>(cur_sensor_data)&&(cur_idx== ws.target_loc);
+            double sibal=sqrt(pow(cur_pos.x-state.x,2)+pow(cur_pos.y-state.y,2));
             data[cur_idx]=cur_sensor_data;
-
+            ++it;
 
         }
 
     }
+
+    void prob_map_renewal(){
+        sensor_map::iterator it= data.begin();
+        sensor_map::iterator it_end=data.end();
+        double prob_sum=0.0; //probablity should be divided
+
+        while(it!=it_end){
+            bool isobserved=get<0>(it->second);
+            bool  istarget=get<1>(it->second);
+            idx cur_idx=it->first;
+            if(isobserved)
+                
+
+
+
+
+            it++;
+        }
+
+
+
+
+
+
+    }
+
+
+
+    double distance(const workspace& ws){
+        double d;
+        d=sqrt(pow(ws.m[ws.target_loc].x-state.x,2)+pow(ws.m[ws.target_loc].y-state.y,2));
+        return d;
+
+    }
+
+
 };
+
+
 
 
 #endif // HEADER_H
