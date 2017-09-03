@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /tmp/mozilla_jbs0/clion-2017.2.2/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/jbs/Downloads/clion-2017.2.2/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /tmp/mozilla_jbs0/clion-2017.2.2/bin/cmake/bin/cmake -E remove -f
+RM = /home/jbs/Downloads/clion-2017.2.2/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jbs/prob_agent/Kukmin/prog_agent
+CMAKE_SOURCE_DIR = /home/jbs/CLionProjects/Kukmin/prog_agent
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug
+CMAKE_BINARY_DIR = /home/jbs/CLionProjects/Kukmin/prog_agent/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/prog_agent.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/prog_agent.dir/flags.make
 
 CMakeFiles/prog_agent.dir/main.cpp.o: CMakeFiles/prog_agent.dir/flags.make
 CMakeFiles/prog_agent.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/prog_agent.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/prog_agent.dir/main.cpp.o -c /home/jbs/prob_agent/Kukmin/prog_agent/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jbs/CLionProjects/Kukmin/prog_agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/prog_agent.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/prog_agent.dir/main.cpp.o -c /home/jbs/CLionProjects/Kukmin/prog_agent/main.cpp
 
 CMakeFiles/prog_agent.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/prog_agent.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jbs/prob_agent/Kukmin/prog_agent/main.cpp > CMakeFiles/prog_agent.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jbs/CLionProjects/Kukmin/prog_agent/main.cpp > CMakeFiles/prog_agent.dir/main.cpp.i
 
 CMakeFiles/prog_agent.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/prog_agent.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jbs/prob_agent/Kukmin/prog_agent/main.cpp -o CMakeFiles/prog_agent.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jbs/CLionProjects/Kukmin/prog_agent/main.cpp -o CMakeFiles/prog_agent.dir/main.cpp.s
 
 CMakeFiles/prog_agent.dir/main.cpp.o.requires:
 
@@ -81,17 +81,43 @@ CMakeFiles/prog_agent.dir/main.cpp.o.provides: CMakeFiles/prog_agent.dir/main.cp
 CMakeFiles/prog_agent.dir/main.cpp.o.provides.build: CMakeFiles/prog_agent.dir/main.cpp.o
 
 
+CMakeFiles/prog_agent.dir/ros_main.cpp.o: CMakeFiles/prog_agent.dir/flags.make
+CMakeFiles/prog_agent.dir/ros_main.cpp.o: ../ros_main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jbs/CLionProjects/Kukmin/prog_agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/prog_agent.dir/ros_main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/prog_agent.dir/ros_main.cpp.o -c /home/jbs/CLionProjects/Kukmin/prog_agent/ros_main.cpp
+
+CMakeFiles/prog_agent.dir/ros_main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/prog_agent.dir/ros_main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jbs/CLionProjects/Kukmin/prog_agent/ros_main.cpp > CMakeFiles/prog_agent.dir/ros_main.cpp.i
+
+CMakeFiles/prog_agent.dir/ros_main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/prog_agent.dir/ros_main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jbs/CLionProjects/Kukmin/prog_agent/ros_main.cpp -o CMakeFiles/prog_agent.dir/ros_main.cpp.s
+
+CMakeFiles/prog_agent.dir/ros_main.cpp.o.requires:
+
+.PHONY : CMakeFiles/prog_agent.dir/ros_main.cpp.o.requires
+
+CMakeFiles/prog_agent.dir/ros_main.cpp.o.provides: CMakeFiles/prog_agent.dir/ros_main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/prog_agent.dir/build.make CMakeFiles/prog_agent.dir/ros_main.cpp.o.provides.build
+.PHONY : CMakeFiles/prog_agent.dir/ros_main.cpp.o.provides
+
+CMakeFiles/prog_agent.dir/ros_main.cpp.o.provides.build: CMakeFiles/prog_agent.dir/ros_main.cpp.o
+
+
 # Object files for target prog_agent
 prog_agent_OBJECTS = \
-"CMakeFiles/prog_agent.dir/main.cpp.o"
+"CMakeFiles/prog_agent.dir/main.cpp.o" \
+"CMakeFiles/prog_agent.dir/ros_main.cpp.o"
 
 # External object files for target prog_agent
 prog_agent_EXTERNAL_OBJECTS =
 
 prog_agent: CMakeFiles/prog_agent.dir/main.cpp.o
+prog_agent: CMakeFiles/prog_agent.dir/ros_main.cpp.o
 prog_agent: CMakeFiles/prog_agent.dir/build.make
 prog_agent: CMakeFiles/prog_agent.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable prog_agent"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jbs/CLionProjects/Kukmin/prog_agent/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable prog_agent"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/prog_agent.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -100,6 +126,7 @@ CMakeFiles/prog_agent.dir/build: prog_agent
 .PHONY : CMakeFiles/prog_agent.dir/build
 
 CMakeFiles/prog_agent.dir/requires: CMakeFiles/prog_agent.dir/main.cpp.o.requires
+CMakeFiles/prog_agent.dir/requires: CMakeFiles/prog_agent.dir/ros_main.cpp.o.requires
 
 .PHONY : CMakeFiles/prog_agent.dir/requires
 
@@ -108,6 +135,6 @@ CMakeFiles/prog_agent.dir/clean:
 .PHONY : CMakeFiles/prog_agent.dir/clean
 
 CMakeFiles/prog_agent.dir/depend:
-	cd /home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbs/prob_agent/Kukmin/prog_agent /home/jbs/prob_agent/Kukmin/prog_agent /home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug /home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug /home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/CMakeFiles/prog_agent.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jbs/CLionProjects/Kukmin/prog_agent/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbs/CLionProjects/Kukmin/prog_agent /home/jbs/CLionProjects/Kukmin/prog_agent /home/jbs/CLionProjects/Kukmin/prog_agent/cmake-build-debug /home/jbs/CLionProjects/Kukmin/prog_agent/cmake-build-debug /home/jbs/CLionProjects/Kukmin/prog_agent/cmake-build-debug/CMakeFiles/prog_agent.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/prog_agent.dir/depend
 

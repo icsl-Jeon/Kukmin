@@ -1,4 +1,4 @@
-# Install script for directory: /home/jbs/prob_agent/Kukmin/prog_agent
+# Install script for directory: /home/jbs/CLionProjects/Kukmin/prog_agent
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/jbs/CLionProjects/Kukmin/prog_agent/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

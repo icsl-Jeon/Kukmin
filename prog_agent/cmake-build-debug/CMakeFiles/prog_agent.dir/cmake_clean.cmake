@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/prog_agent.dir/main.cpp.o"
+  "CMakeFiles/prog_agent.dir/ros_main.cpp.o"
   "prog_agent.pdb"
   "prog_agent"
 )

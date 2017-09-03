@@ -1,2 +1,2 @@
 Options: 
-CMake: 3.8.2@/tmp/mozilla_jbs0/clion-2017.2.2/bin/cmake/bin/cmake
+CMake: 3.8.2@/home/jbs/Downloads/clion-2017.2.2/bin/cmake/bin/cmake

@@ -4,13 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/jbs/prob_agent/Kukmin/prog_agent/main.cpp" "/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/CMakeFiles/prog_agent.dir/main.cpp.o"
+  "/home/jbs/CLionProjects/Kukmin/prog_agent/main.cpp" "/home/jbs/CLionProjects/Kukmin/prog_agent/cmake-build-debug/CMakeFiles/prog_agent.dir/main.cpp.o"
+  "/home/jbs/CLionProjects/Kukmin/prog_agent/ros_main.cpp" "/home/jbs/CLionProjects/Kukmin/prog_agent/cmake-build-debug/CMakeFiles/prog_agent.dir/ros_main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/opt/ros/indigo/include"
+  "/opt/ros/kinetic/include"
   )
 
 # Targets to which this target links.
