@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/opt/ros/kinetic/include 
+CXX_INCLUDES = -I/opt/ros/indigo/include 
 

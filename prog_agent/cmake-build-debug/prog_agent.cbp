@@ -8,91 +8,97 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/jbs/CLionProjects/prog_agent/cmake-build-debug"/>
+				<Option working_dir="/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/jbs/CLionProjects/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/jbs/CLionProjects/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/jbs/CLionProjects/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/jbs/CLionProjects/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/jbs/CLionProjects/prog_agent/cmake-build-debug"/>
+				<Option working_dir="/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/jbs/CLionProjects/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/jbs/CLionProjects/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/jbs/CLionProjects/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/jbs/CLionProjects/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/jbs/CLionProjects/prog_agent/cmake-build-debug"/>
+				<Option working_dir="/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/jbs/CLionProjects/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/jbs/CLionProjects/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/jbs/CLionProjects/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/jbs/CLionProjects/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="prog_agent">
-				<Option output="/home/jbs/CLionProjects/prog_agent/cmake-build-debug/prog_agent" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jbs/CLionProjects/prog_agent/cmake-build-debug"/>
+				<Option output="/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/prog_agent" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/opt/ros/indigo/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/jbs/CLionProjects/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 prog_agent"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/jbs/CLionProjects/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/jbs/CLionProjects/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/jbs/CLionProjects/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 prog_agent"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="prog_agent/fast">
-				<Option output="/home/jbs/CLionProjects/prog_agent/cmake-build-debug/prog_agent" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jbs/CLionProjects/prog_agent/cmake-build-debug"/>
+				<Option output="/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/prog_agent" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/opt/ros/kinetic/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/opt/ros/indigo/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/jbs/CLionProjects/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 prog_agent/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/jbs/CLionProjects/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/jbs/CLionProjects/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/jbs/CLionProjects/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 prog_agent/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/jbs/prob_agent/Kukmin/prog_agent/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/jbs/CLionProjects/prog_agent/main.cpp">
+		<Unit filename="/home/jbs/prob_agent/Kukmin/prog_agent/CMakeLists.txt">
 			<Option target="prog_agent"/>
 		</Unit>
-		<Unit filename="/home/jbs/CLionProjects/prog_agent/prob_agent.h">
+		<Unit filename="/home/jbs/prob_agent/Kukmin/prog_agent/functions.h">
 			<Option target="prog_agent"/>
 		</Unit>
-		<Unit filename="/home/jbs/CLionProjects/prog_agent/CMakeLists.txt">
+		<Unit filename="/home/jbs/prob_agent/Kukmin/prog_agent/main.cpp">
+			<Option target="prog_agent"/>
+		</Unit>
+		<Unit filename="/home/jbs/prob_agent/Kukmin/prog_agent/prob_agent.h">
+			<Option target="prog_agent"/>
+		</Unit>
+		<Unit filename="/home/jbs/prob_agent/Kukmin/prog_agent/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -8,11 +8,11 @@
 #include <map>
 #include <tuple>
 #include <iterator>
-#include <math.h>
+#include "functions.h"
+#include <stdio.h>
 
 using namespace std;
 
-#define PI 3.141592
 
 typedef tuple<int,int> idx;
 typedef geometry_msgs::Pose2D pos;
@@ -21,14 +21,6 @@ typedef tuple<bool,bool> sensor_data;
 typedef map<idx,pos> pos_map;
 typedef map<idx,sensor_data> sensor_map;
 typedef map<idx,double> probablity_map;
-
-double atan3(double Y,double X){
-
-    double theta=atan2(Y,X);
-    if(theta<0)
-        theta =2*PI+theta;
-    return theta;
-}
 
 
 class workspace{
@@ -59,13 +51,12 @@ public:
 };
 
 class agent{
-private:
+public:
     // sensor angle and radius
     double sensor_ang,sensor_rad;
     //state varabile
     geometry_msgs::Pose2D state;
     int Nx, Ny;
-public:
     sensor_map data;
     probablity_map prob_map;
 
@@ -92,16 +83,25 @@ public:
         probablity_map::iterator it=prob_map.begin();
         probablity_map::iterator it_end=prob_map.end();
 
-        double init_prob=1/(Nx*Ny);
+        double init_prob=(double)1/(Nx*Ny);
 
-        while(it!=it_end){
-
-            it->second=init_prob;
-            ++it;
-        }
+        for(int i=1;i<=Nx;i++)
+            for(int j=1;j<=Ny;j++){
+                idx cur_idx(i,j);
+                prob_map.insert(pair<idx,double>(cur_idx,init_prob));
+            }
     }
 
-    void data_renewal(const workspace& ws){
+    void agent_state(){
+
+        cout<<"[x,y,theta]=["<<state.x<<" , "<<state.y<<" , "<<state.theta<<"]"<<endl;
+
+
+    }
+
+
+
+    void data_renewal(workspace& ws){
         pos_map::iterator it= ws.m.begin();
         pos_map::iterator it_end=ws.m.end();
 
@@ -135,29 +135,65 @@ public:
             bool  istarget=get<1>(it->second);
             idx cur_idx=it->first;
             if(isobserved)
-                
-
-
-
+                if(istarget)
+                    prob_map[it->first]=0.9;
+                        else
+                    prob_map[it->first]=0;
+            prob_sum+=prob_map[it->first];
 
             it++;
         }
 
+        // make the sum of probability
+        it= data.begin();
+        while(it!=it_end) {
+            prob_map[it->first] = prob_map[it->first] / prob_sum;
+            it++;
+        }
+
+    }
+
+     cmd_vel following_control(workspace& ws,double Kv,double Ktheta){
 
 
+         idx x_max(1,1);
 
+
+         probablity_map::iterator it=prob_map.begin();
+         probablity_map::iterator it_end=prob_map.end();
+
+
+         while(it!=it_end){
+            if((distance(ws.m[it->first],state)<2) && prob_map[it->first]>=prob_map[x_max]) {
+                x_max = it->first;
+            }
+             it++;
+
+         }
+         cout<<"following point idx: [ "<<get<0>(x_max)<<" , "<<get<1>(x_max)<<"]"<<endl;
+         pos x_max_pos=ws.m[x_max];
+
+         cmd_vel cmd_vel1;
+         cmd_vel1.linear_vel=Kv*distance(x_max_pos,state);
+         double theta_d=atan3(x_max_pos.y-state.y,x_max_pos.x-state.x);
+         cmd_vel1.ang_vel=Ktheta*(theta_d-state.theta);
+
+        return cmd_vel1;
+     }
+
+
+    void prob_map_plot(){
+        for(int i=Ny;i>=1;i--)
+            for(int j=1;j<=Nx;j++) {
+                idx cur_idx(j, i);
+                printf("%2.4f ",prob_map[cur_idx]);
+                if(j==Nx)
+                    printf("\n");
+            }
 
 
     }
 
-
-
-    double distance(const workspace& ws){
-        double d;
-        d=sqrt(pow(ws.m[ws.target_loc].x-state.x,2)+pow(ws.m[ws.target_loc].y-state.y,2));
-        return d;
-
-    }
 
 
 };
